@@ -12,6 +12,7 @@
 	"keywords": ["jasperreports","jaspersoft", "jasper-reports", "reporting"],
     "require": {
 		"php": ">=5.3.0",
+        "symfony/http-client": "^4.3",
 		"ext-curl": "*"
     },
 	"autoload": {
