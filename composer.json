@@ -1,5 +1,5 @@
 {
-    "name": "jaspersoft/rest-client",
+    "name": "jaspersoft/rest-client-symfony",
     "description": "A client for the JasperReports Server REST API",
     "license": "LGPL-3.0",
     "authors": [
