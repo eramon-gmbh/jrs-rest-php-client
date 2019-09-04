@@ -1,12 +1,18 @@
 <?php
-require_once "BaseTest.php";
+
+namespace Jaspersoft\Tests;
+
 use Jaspersoft\Tool\TestUtils as u;
 use Jaspersoft\Dto\User\User;
 use Jaspersoft\Dto\User\UserLookup;
 use Jaspersoft\Dto\Role\Role;
 
-class UserServiceTest extends BaseTest {
-
+/**
+ * Class UserServiceTest
+ * @package Jaspersoft\Tests
+ */
+class UserServiceTest extends BaseTest
+{
 	protected $jc;
 	protected $newUser;
 	protected $us;
@@ -53,7 +59,4 @@ class UserServiceTest extends BaseTest {
 		$user = $this->us->getUserByLookup($result[0]);
 		$this->assertEquals($user->username, $this->newUser->username);
 	}
-
 }
-
-?>

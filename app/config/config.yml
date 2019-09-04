@@ -1,0 +1,17 @@
+imports:
+  - { resource: parameters.yml }
+  - { resource: services.yml }
+
+parameters:
+  locale: en
+  container.autowiring.strict_mode: true
+
+framework:
+  php_errors:
+    log: true
+  secret: goii0sfg32423479234ß98203466dd
+  http_client:
+    scoped_clients:
+      jasper.client:
+        auth_basic: "jasperadmin:jasperadmin"
+        base_uri: "http://172.22.51.41:8080/jasperserver-pro/rest_v2/"

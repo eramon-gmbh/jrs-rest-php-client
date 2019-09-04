@@ -1,9 +1,12 @@
 <?php
-require_once __DIR__ . "/BaseTest.php";
-use Jaspersoft\Tool\TestUtils as u;
+namespace Jaspersoft\Tests;
 
-class QueryServiceTest extends BaseTest {
-
+/**
+ * Class QueryServiceTest
+ * @package Jaspersoft\Tests
+ */
+class QueryExecutorTest extends BaseTest
+{
     protected $jc;
     protected $newUser;
     protected $query;

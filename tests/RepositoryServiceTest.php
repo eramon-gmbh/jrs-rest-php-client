@@ -1,17 +1,16 @@
 <?php
-require_once "BaseTest.php";
+namespace Jaspersoft\Tests;
+
 use Jaspersoft\Dto\Resource\JdbcDataSource;
-use Jaspersoft\Tool\TestUtils as u;
-use Jaspersoft\Dto\Resource\Folder;
-use Jaspersoft\Dto\Resource\ResourceLookup;
-use Jaspersoft\Dto\Resource\Resource;
 use Jaspersoft\Service\Criteria\RepositorySearchCriteria;
-use Jaspersoft\Dto\Resource\File;
-use Jaspersoft\Exception\ResourceServiceException;
-use Jaspersoft\Tool\TestUtils;
+use Jaspersoft\Tool\TestUtils as u;
 
-class RepositoryServiceTest extends BaseTest {
-
+/**
+ * Class RepositoryServiceTest
+ * @package Jaspersoft\Tests
+ */
+class RepositoryServiceTest extends BaseTest
+{
 	protected $jc;
 	protected $rs;
 	protected $newResource_image;
@@ -133,8 +132,5 @@ class RepositoryServiceTest extends BaseTest {
         $resource->connectionUrl = "jdbc:postgresql://localhost:5432/foodmart";
 
         $this->rs->createResource($resource, null);
-
     }
 }
-
-?>

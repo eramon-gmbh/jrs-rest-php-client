@@ -1,9 +1,13 @@
 <?php
-require_once __DIR__ . "/BaseTest.php";
-use Jaspersoft\Tool\TestUtils as u;
 
-class ReportOptionsTest extends BaseTest {
+namespace Jaspersoft\Tests;
 
+/**
+ * Class ReportOptionsTest
+ * @package Jaspersoft\Tests
+ */
+class ReportOptionsTest extends BaseTest
+{
 	protected $jc;
 	protected $report_uri;
 	protected $testSuccess;
@@ -37,8 +41,4 @@ class ReportOptionsTest extends BaseTest {
 		$this->os->deleteReportOptions($this->report_uri, $label);
 		$this->assertTrue($this->testSuccess);
 	}
-
-
-
 }
-?>
