@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <phpunit bootstrap="./vendor/autoload.php">
 	<testsuites>
+        <testsuite name="JasperRestClientBundle">
+            <directory>./tests/Phpunit</directory>
+        </testsuite>
 		<testsuite name="Jaspersoft Integration Tests">
 			<directory>./tests</directory>
 		</testsuite>
 	</testsuites>
+    <php>
+        <env name="KERNEL_CLASS" value="Jasper\RestClient\AppKernel" />
+        <ini name="error_reporting" value="-1" />
+    </php>
 </phpunit>

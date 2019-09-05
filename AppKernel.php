@@ -3,6 +3,8 @@
 namespace Jasper\RestClient;
 
 use Symfony\Bundle\DebugBundle\DebugBundle;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Bundle\WebProfilerBundle\WebProfilerBundle;
 use Symfony\Bundle\WebServerBundle\WebServerBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -20,6 +22,8 @@ class AppKernel extends Kernel
     public function registerBundles(): array
     {
         $bundles = [
+            new FrameworkBundle(),
+            new TwigBundle(),
             new JasperRestClientBundle(),
         ];
 

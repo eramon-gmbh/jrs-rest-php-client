@@ -2,3 +2,7 @@ services:
   _defaults:
     public: false
     autowire: true
+
+  jasper.client.service:
+    class: Jasper\RestClient\Service\Client
+    public: true

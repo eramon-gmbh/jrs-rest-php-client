@@ -23,7 +23,9 @@
     "symfony/http-client": "^4.3",
     "symfony/http-kernel": "^4.3",
     "ext-curl": "*",
-    "symfony/framework-bundle": "^4.3"
+    "symfony/framework-bundle": "^4.3",
+    "symfony/yaml": "^4.3",
+    "symfony/twig-bundle": "^4.3"
   },
   "require-dev": {
     "symfony/browser-kit": "*",
@@ -40,7 +42,7 @@
   "description": "A Symfony HttpClient Bundle for the JasperReports Server REST API",
   "autoload": {
     "psr-4": {
-      "Jasper\\RestClient\\": "./src/",
+      "Jasper\\RestClient\\": "./",
       "Jaspersoft\\": "./src/Jaspersoft/"
     },
     "classmap": [
@@ -52,8 +54,17 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Jasper\\RestClient\\Tests\\Phpunit\\": "./tests/Phpunit",
+      "Jasper\\RestClient\\Tests\\Phpunit\\": "./Phpunit",
       "Jaspersoft\\Tests\\": "./tests/"
     }
-  }
+  },
+  "config": {
+    "discard-changes": true,
+    "platform": {
+      "php": "7.1.8"
+    },
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
