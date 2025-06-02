@@ -32,12 +32,20 @@ class RepositoryService
     private function makeUrl(RepositorySearchCriteria $criteria = null, $uri = null, $expanded = null)
     {
         $result = $this->base_url . '/resources';
-        if (!empty($criteria))
+        if (!empty($criteria)) {
             $result .= '?' . $criteria->toQueryParams();
-        else
+        } else {
             $result = $this->base_url . '/resources' . $uri;
-        if (!empty($expanded))
-            $result .= '?expanded=true';
+        }
+
+        if (!empty($expanded)) {
+            $separator = (strpos($result, '?') !== false) ? '&' : '?';
+            $result .= $separator . 'expanded=true';
+        }
+
+        $separator = (strpos($result, '?') !== false) ? '&' : '?';
+        $result .= $separator . 'userTimezone=' . date_default_timezone_get();
+
         return $result;
     }
 

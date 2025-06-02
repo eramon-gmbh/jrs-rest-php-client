@@ -25,8 +25,13 @@ class JobService
     private function makeUrl($params = null)
     {
         $url = $this->restUrl2 . '/jobs';
-        if (!empty($params))
+        if (!empty($params)) {
             $url .= '?' . Util::query_suffix($params);
+        }
+
+        $separator = (strpos($url, '?') !== false) ? '&' : '?';
+        $url .= $separator . 'userTimezone=' . date_default_timezone_get();
+
         return $url;
     }
 	
